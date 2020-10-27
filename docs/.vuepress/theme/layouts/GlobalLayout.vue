@@ -6,7 +6,6 @@
     color="blue-grey darken-4"
     dark
     clipped-left
-    hide-on-scroll
     >
 
       <v-app-bar-nav-icon @click="drawer = !drawer" aria-label="Menu">

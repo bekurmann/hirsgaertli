@@ -2,7 +2,7 @@
 
     <v-container>
             <v-row justify="center" v-for="page in $pagination.pages">
-              <v-col cols="12" md="10" lg="8" xl="8"> 
+              <v-col cols="12" md="10" lg="10" xl="10"> 
                 <v-card :to="page.path">
                   <v-img height="100" :src="page.frontmatter.img" contain class="blue-grey darken-4" v-if="page.frontmatter.img"></v-img>
                     

@@ -3,15 +3,28 @@
     <v-container>
             <v-row justify="center" v-for="page in $pagination.pages">
               <v-col cols="12" md="10" lg="8" xl="8" > 
-                <v-card :to="page.path">
-                  <v-img height="100" :src="page.frontmatter.img" contain class="blue-grey darken-4" v-if="page.frontmatter.img"></v-img>
+
+                <!-- <v-card :to="page.path">
+                  <v-img height="200" :src="page.frontmatter.img" contain class="blue-grey darken-4" v-if="page.frontmatter.img"></v-img>
                     
                     <v-card-title>{{ page.title }}</v-card-title>
                     <v-card-subtitle>von {{ page.frontmatter.author }}, {{ formateDate(page.frontmatter.date) }}</v-card-subtitle>
                     <v-card-text>{{ page.frontmatter.description }}</v-card-text>
                     <v-card-actions><v-btn color="blue-grey darken-4" dark :to="page.path">Mehr lesen</v-btn></v-card-actions>
+                </v-card> -->
 
+                <v-card>
+                  <div class="d-flex flex-no-wrap justify-space-between">
+                    <div>
+                      <v-card-title class="headline">{{ page.title }}</v-card-title>
+                      <v-card-subtitle>von {{ page.frontmatter.author }}, {{ formateDate(page.frontmatter.date) }}</v-card-subtitle>
+                      <v-card-text>{{ page.frontmatter.description }}</v-card-text>
+                      <v-card-actions><v-btn color="blue-grey darken-4" dark :to="page.path">Mehr lesen</v-btn></v-card-actions>
+                    </div>
+                      <v-img class="ma-3" max-width="350" :src="page.frontmatter.img"></v-img>
+                  </div>
                 </v-card>
+
               </v-col>
             </v-row>
             <v-row justify="center">
