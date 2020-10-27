@@ -1,6 +1,6 @@
-# bk
+# My Personal Website
 
-> bk hosting entwicklung linux
+This is the code of my personal website. Since I love vue, I created it with vuepress. The great UI-Library Vuetify made it simple, to build something beautiful. The blog-plugin for vuepress 
 
 ## Development
 
