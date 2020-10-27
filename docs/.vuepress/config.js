@@ -99,7 +99,7 @@ module.exports = {
           itemLayout: 'Blog_Post',
           itemPermalink: '/blog/:year/:month/:day/:slug',
           pagination: {
-            lengthPerPage: 8,
+            lengthPerPage: 1,
             layout: 'Blog_DirectoryPagination'
           },
         },
