@@ -1,0 +1,31 @@
+/**
+ * Custom Styles here.
+ *
+ * ref：https://v1.vuepress.vuejs.org/config/#index-styl
+ */
+
+.home .hero img
+  max-width 450px!important
+
+h1, h2, h3, h4, h5, h6 {
+
+margin-bottom: 10px;
+
+  .header-anchor {
+    opacity: 0 !important;
+    position: absolute;
+    width: 100%;
+  }
+
+  &:hover {
+    .header-anchor {
+      opacity: 1 !important;
+    }
+  }
+}
+
+.v-application code {
+  background: none;
+  box-shadow: none;
+  color: white;
+}
