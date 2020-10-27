@@ -12,6 +12,9 @@ module.exports = {
    */
   description: description,
 
+  // for deploying to github.io
+  // base: '/hirsgaertli/',
+
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
