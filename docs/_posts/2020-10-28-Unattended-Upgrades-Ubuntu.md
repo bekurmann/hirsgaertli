@@ -1,9 +1,9 @@
 ---
-title: 5 Dinge die man nach der Installation von Ubuntu Server tun sollte
+title: Unattended Upgrades in Ubuntu 20.04 konfigurieren
 description: Mit fünf einfachen Schritten Ubuntu Server besser absichern
 author: Benjamin
-category: ubuntu
-tags: ubuntu hardening steps ssh banner 
+category: howto
+tags: ubuntu unattended upgrades 
 date: 2020-10-28
 img: /blog/2020-10-27/nextcloud.png
 ---

@@ -70,16 +70,7 @@
             </v-list-item-content>
           </v-list-item>
 
-          <!-- <v-list-item nav link to="/fun" aria-label="Fun">
-            <v-list-item-icon>
-              <v-icon>mdi-gamepad-variant-outline</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>Spielplatz</v-list-item-title>
-            </v-list-item-content>mdi-post-outline
-          </v-list-item> -->
-
-          <!-- begin group linux -->
+          <!-- begin group blog -->
           
           <v-list-group prepend-icon="mdi-post-outline" no-action color="blue-grey darken-4">
 
@@ -90,18 +81,18 @@
             </template>
    
 
-            <v-list-item link to="/blog/">       
+            <v-list-item link to="/blog/category/howto/">       
               <v-list-item-title>Anleitungen</v-list-item-title>         
-              <v-list-item-icon><v-icon>mdi-ubuntu</v-icon></v-list-item-icon>  
+              <v-list-item-icon><v-icon>mdi-text-box-search-outline</v-icon></v-list-item-icon>  
             </v-list-item>
 
-            <!-- <v-list-item nav link to="/blog/category/nextcloud/">  
-              <v-list-item-title>Serie Heimserver</v-list-item-title>     
-              <v-list-item-icon><v-icon>mdi-cloud-outline</v-icon></v-list-item-icon>     
+            <!-- <v-list-item nav link to="/blog/category/code/">  
+              <v-list-item-title>Code</v-list-item-title>     
+              <v-list-item-icon><v-icon>mdi-gamepad-variant-outline</v-icon></v-list-item-icon>     
             </v-list-item> -->
 
           </v-list-group>
-          <!-- end group linux -->
+          <!-- end group blog -->
 
           <v-list-item nav link to="/kontakt" aria-label="Kontakt">
             <v-list-item-icon>
