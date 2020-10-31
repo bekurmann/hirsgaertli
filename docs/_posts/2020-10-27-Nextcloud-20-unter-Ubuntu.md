@@ -27,7 +27,7 @@ Was du brauchst?
 * Im Idealfall zwei Datenträger:
   * Einen wirst du haben - da ist Ubuntu drauf und da installieren wir gleich alles andere
   * Einen Datenträger für die Nextcloud-Daten (Benutzer Uploads); Mountpoint im Beispiel unten ist `/mnt/ssd/`
-* Einen ReverseProxy, am besten [nginx proxy manager](https://github.com/jc21/nginx-proxy-manager) - ich werde SSL Zertifikate hier nicht machen.
+* Wenn du deinen Server übers Internet erreichbar machen willst, eine Domain (TLD)
 
 ## Inhalt
 
@@ -160,10 +160,10 @@ Inhalt:
 
 ```bash
 <VirtualHost *:80>
-    ServerAdmin tech@kurmail.ch
+    ServerAdmin deine@email.ch
     DocumentRoot /var/www/nextcloud/
-    ServerName server.local
-    ServerAlias www.demo.domain.com
+    ServerName nextcloud.local
+    ServerAlias www.nextcloud.deinedomain.ch
 
     Alias /nextcloud "/var/www/nextcloud/"
 
@@ -182,6 +182,8 @@ Inhalt:
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
+Passe bitte `ServerAdmin`, `ServerName` und `ServerAlias` entsprechend an.
+Im lokalen Netzwerk kannst du `ServerName nextcloud.local` belassen, ansonsten dort deine TLD eintragen. 
 
 ### Apache2 Module und config
 
@@ -369,3 +371,38 @@ Nach fünf fehlerhaften Anmeldeversuchen `maxretry` innerhalb von 36000 Sekunden
 fail2ban-client status nextcloud
 ```
 
+## SSL mit Certbot
+
+Zum Lösen eines Let's Encrypt SSL-Zertifikates, benutzt du am besten [Certbot](https://certbot.eff.org/).
+
+```bash
+apt install python-certbot-apache
+```
+
+Weil du nicht der erste Mensch ist, der eine Apache Seite mittels SSL-Zertifikat von Cerbot absichern möchte, ist die [Integration in deinen Apache-Server](https://certbot.eff.org/docs/install.html) sehr einfach:
+
+```bash
+certbot --apache -m deine@email.ch -d deine.domain.ch
+```
+
+Weil dein neues Zertifikat nur 90 Tage gültig ist, richten wir noch einen cronjob ein, der dieses automatisch erneuert:
+
+```bash
+crontab -e
+```
+
+und ergänzen darin:
+
+```bash
+0 3 1 * * /usr/bin/certbot renew & > /dev/null
+```
+
+## Testen
+
+Nachdem du alles gemacht hast, teste deine Installation:
+
+https://www.ssllabs.com/ssltest/
+
+https://observatory.mozilla.org/
+
+https://scan.nextcloud.com/
