@@ -89,7 +89,6 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
     ['@vuepress/search', {
       searchMaxSuggestions: 10,
-      test: ['/entwicklung/', '/fun/', '/hosting/', '/kontakt/', '/blog/', ]
     }],
     ['@vuepress/blog',
     {
