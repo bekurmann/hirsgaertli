@@ -88,7 +88,7 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     ['@vuepress/search', {
-      searchMaxSuggestions: 10,
+      searchMaxSuggestions: 10
     }],
     ['@vuepress/blog',
     {

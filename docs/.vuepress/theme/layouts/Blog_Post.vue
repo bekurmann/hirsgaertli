@@ -8,13 +8,6 @@
                         <v-row>
                             <v-col>
                                 <v-container>
-                                    <PostMeta
-                                    :title="$frontmatter.title"
-                                    :description="$frontmatter.description"
-                                    :author="$frontmatter.author"
-                                    :tags="$frontmatter.tags"
-                                    :date="$frontmatter.date"
-                                    />
                                     <Content />
                                 </v-container>
                             </v-col>
