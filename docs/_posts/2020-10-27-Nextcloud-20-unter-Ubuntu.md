@@ -401,8 +401,8 @@ und ergänzen darin:
 
 Nachdem du alles gemacht hast, teste deine Installation:
 
-https://www.ssllabs.com/ssltest/
+[SSLlabs.com](https://www.ssllabs.com/ssltest/)
 
-https://observatory.mozilla.org/
+[Mozilla Observatory](https://observatory.mozilla.org/)
 
-https://scan.nextcloud.com/
+[Nextcloud Security Scan](https://scan.nextcloud.com/)

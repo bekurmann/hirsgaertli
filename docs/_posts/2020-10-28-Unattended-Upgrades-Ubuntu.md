@@ -1,99 +1,66 @@
 ---
 title: Unattended Upgrades in Ubuntu 20.04 konfigurieren
-description: Mit fünf einfachen Schritten Ubuntu Server besser absichern
+description: So richtest du automatische Updates unter Ubuntu 20.04 ein. Damit dein Server stets auf dem neusten Stand ist. 
 author: Benjamin
 category: howto
 tags: ubuntu unattended upgrades 
 date: 2020-10-28
-img: /blog/2020-10-27/nextcloud.png
+img: /blog/2020-10-28/unattended-upgrades.png
 ---
 
-# Example blog post
+# Unattended Upgrades in Ubuntu 20.04 konfigurieren
 
-## why?
-
-This is our first example blog post.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-
-:tada: :100:
-
-::: tip
-This is a tip
+::: tip 
+Ob du das wirklich willst, musst du selbst entscheiden. Gewisse Leute wollen nicht, dass ihre Server-Installation ohne ihre Beaufsichtigung Updates durchführen. Tu was du nicht lassen kannst - nachfolgend zeige ich dir jedenfalls, wie es gehen würde. 
 :::
 
----
+## Installation
 
-Don't use warnings.
+Wie immer starten wir, indem wir unsere Paketquellen aktualisieren. 
 
-::: warning
-This is a warning
-:::
-
----
-
-::: danger
-This is a dangerous warning
-:::
-
-::: details
-This is a details block, which does not work in IE / Edge
-:::
-
-::: danger STOP
-Danger zone, do not proceed
-:::
-
-::: details Click me to view the code
-```js
-console.log('Hello, VuePress!')
+```bash
+apt update
 ```
-:::
 
-``` js
-export default {
-  name: 'MyComponent',
-  // ...
-}
+```bash
+apt install unattended-upgrades update-notifier-common
+```
+
+## Konfiguration
+
+Standardmässig ist `unattended-upgrades` so konfiguriert, dass nur security-updates installiert werden. Ich empfehle dir, dies so zu belassen.
+
+Dennoch passen wir die Datei `/etc/apt/apt.conf.d/50unattended-upgrades` ein wenig an (unkommentieren & ändern):
+
+```bash
+Unattended-Upgrade::MailReport "only-on-error";
+Unattended-Upgrade::Remove-Unused-Dependencies "true";
+Unattended-Upgrade::Automatic-Reboot "true";
+Unattended-Upgrade::Automatic-Reboot-Time "03:00";
+```
+
+Mail gibt's laso nur bei Fehlern, `apt autoremove` wird nach Installation ausgeführt, Server wird automatisch neu gestartet und das ganze passiert jeweils um 03:00 Uhr morgens. 
+
+## Enabling
+
+In `/etc/apt/apt.conf.d/20auto-upgrades` müssen folgende Werte drin sein:
+
+```bash
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Unattended-Upgrade "1";
+```
+
+## Testen
+
+Damit wir sicher sein können, dass das ganze auch funktioniert, testen wir:
+
+```bash
+unattended-upgrades --dry-run --debug
 ```
 
 
-``` html
-<ul>
-  <li
-    v-for="todo in todos"
-    :key="todo.id"
-  >
-    {{ todo.text }}
-  </li>
-</ul>
-```
 
-``` js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
 
-``` js{1,4,6-7}
-export default { // Highlighted
-  data () {
-    return {
-      msg: `Highlighted!
-      This line isn't highlighted,
-      but this and the next 2 are.`,
-      motd: 'VuePress is awesome',
-      lorem: 'ipsum',
-    }
-  }
-}
-```
+
+
+

@@ -38,13 +38,13 @@ module.exports = {
     ['meta', { property: 'og:url', content: 'https://hirsgaertli.ch'}],
     ['meta', { property: 'og:title', content: 'bk/ - hirsgaertli.ch - Benjamin Kurmann - Hosting, Entwicklung, Linux'}],
     ['meta', { property: 'og:description', content: 'bk/ - hirsgaertli.ch - Benjamin Kurmann - Dein persönlicher Partner für Hosting, Entwicklung und Linux.'}],
-    ['meta', { property: 'og:image', content: '/meta.png'}],
+    ['meta', { property: 'og:image', content: 'https://hirsgaertli.ch/meta.png'}],
     /* Twitter */
     ['meta', { property: 'twitter:card', content: 'summary_large_image'}],
     ['meta', { property: 'twitter:url', content: 'https://hirsgaertli.ch'}],
     ['meta', { property: 'twitter:title', content: 'bk/ - hirsgaertli.ch - Benjamin Kurmann - Hosting, Entwicklung, Linux'}],
     ['meta', { property: 'twitter:description', content: 'bk/ - hirsgaertli.ch - Benjamin Kurmann - Dein persönlicher Partner für Hosting, Entwicklung und Linux.'}],
-    ['meta', { property: 'twitter:image', content: '/meta.png'}],
+    ['meta', { property: 'twitter:image', content: 'https://hirsgaertli.ch/meta.png'}],
 
   ],
 
