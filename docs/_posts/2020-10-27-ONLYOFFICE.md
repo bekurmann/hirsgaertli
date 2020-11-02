@@ -43,10 +43,10 @@ systemctl enable docker
 
 ## ONLYOFFICE im Docker Container
 
-Mit folgendem Befehl startest du ONLYOFFICE in einem Docker container. Wichtig: erzeuge vorgängig ein sicheres Passwort und ersetze `your-secret-key`
+Mit folgendem Befehl startest du ONLYOFFICE in einem Docker container. Wichtig: erzeuge vorgängig ein sicheres Passwort und ersetze `your-secret-key`. Ausserdem musst du die IP-Adresse anpassen (`192.168.13.37`).
 
 ```bash
-docker run -i -t -d -p 10.1.1.12:9981:80 -e JWT_ENABLED='true' -e JWT_SECRET='your-secret-key' --restart=always onlyoffice/documentserver
+docker run -i -t -d -p 192.168.13.37:9981:80 -e JWT_ENABLED='true' -e JWT_SECRET='your-secret-key' --restart=always onlyoffice/documentserver
 ```
 
 Kontrolliere, ob das geklappt hat:
