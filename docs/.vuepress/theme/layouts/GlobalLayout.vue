@@ -38,6 +38,7 @@
     v-model="drawer"
     clipped
     value="false"
+    stateless
     >
 
       <v-list>
