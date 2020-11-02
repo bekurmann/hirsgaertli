@@ -111,6 +111,7 @@ module.exports = {
           id: 'category',
           keys: ['category'],
           path: '/blog/category/',
+          title: '',
           scopeLayout: 'Blog_DirectoryPagination'
         },
       ],

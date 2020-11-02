@@ -226,7 +226,7 @@ Nun müssen wir dem Benutzer www-data (Apache) die notwendigen Berechtigungen ge
 Zuerst dem Datenverzeichnis (bitte passe das an; wenn du kein spezifisches Datenverzeichnis angelegt hast, befindet sich dein Datenverzeichnis später einfach im `nextcloud`-Verzeichnis. Davon rate ich dir ab. 
 
 ::: tip
-Im Idealfall verfügst du über zwei Datenträger: Einer, auf dem du deinen LAMP-Stack am laufen hast und ein anderer, auf dem du die Daten deiner ablegst. Je nach Umgebung macht man dies unterschiedlich. Ich werde in einer anderen Anleitung darauf zurückkommen. Best practice wäre, wenn die Daten (also deine Dateien/Benutzer-Uploads) nicht im ` www/` Verzeichnis sind.
+Im Idealfall verfügst du über zwei Datenträger: Einer, auf dem du deinen LAMP-Stack am laufen hast und ein anderer, auf dem du die Daten deiner Benutzer ablegst. Je nach Umgebung macht man dies unterschiedlich. Ich werde in einer anderen Anleitung darauf zurückkommen. Best practice wäre, wenn die Daten (also deine Dateien/Benutzer-Uploads) nicht im ` www/` Verzeichnis sind.
 :::
 
 Datenverzeichnis:
@@ -372,6 +372,10 @@ fail2ban-client status nextcloud
 ```
 
 ## SSL mit Certbot
+
+::: tip
+Solltest du mehrere HTTP/HTTPS-Dienste auf dem Server laufen haben, empfehle ich dir einen Reverse Proxy, namentlich mit Hilfe des nginx proxy manager, einzurichten. So kannst du deine Zertifikate automatisisert und zentral verwalten. Eine Anleitung hierzu findest du auch bei mir. 
+:::
 
 Zum Lösen eines Let's Encrypt SSL-Zertifikates, benutzt du am besten [Certbot](https://certbot.eff.org/).
 
