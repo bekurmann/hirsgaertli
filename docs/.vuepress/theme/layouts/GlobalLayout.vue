@@ -38,7 +38,7 @@
     v-model="drawer"
     clipped
     value="false"
-    stateless
+    disable-resize-watcher
     >
 
       <v-list>
