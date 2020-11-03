@@ -80,13 +80,17 @@
                 <v-list-item-title>Blog</v-list-item-title>
               </v-list-item-content>
             </template>
-   
+
+            <!-- <v-list-item nav link to="/blog/category/opinion/">  
+              <v-list-item-title>Kommentare</v-list-item-title>     
+              <v-list-item-icon><v-icon>mdi-account-voice</v-icon></v-list-item-icon>     
+            </v-list-item>    -->
 
             <v-list-item link to="/blog/category/howto/">       
               <v-list-item-title>Anleitungen</v-list-item-title>         
               <v-list-item-icon><v-icon>mdi-text-box-search-outline</v-icon></v-list-item-icon>  
             </v-list-item>
-
+      
             <!-- <v-list-item nav link to="/blog/category/code/">  
               <v-list-item-title>Code</v-list-item-title>     
               <v-list-item-icon><v-icon>mdi-gamepad-variant-outline</v-icon></v-list-item-icon>     

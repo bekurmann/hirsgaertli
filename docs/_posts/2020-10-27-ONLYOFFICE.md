@@ -12,7 +12,7 @@ img: /blog/2020-10-27/onlyoffice.png
 
 ONLYOFFICE ermöglicht dir, Office-Dateien direkt im Browser kollaborativ zu bearbeiten. Nach der Installation von Nextcloud, gehört die Installation von ONLYOFFICE zum Pflichtprogramm.
 
-Besuche auch deren Webseite [ONLYOFFICE](https://www.onlyoffice.com/), damit du einen Überblick über die Features erhälst. 
+Besuche auch deren Webseite [ONLYOFFICE](https://www.onlyoffice.com/), damit du einen Überblick über die Features erhältst. 
 
 ## Was du brauchst
 
