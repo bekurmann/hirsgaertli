@@ -48,6 +48,11 @@ module.exports = {
 
   ],
 
+  /**
+   * Adjustment Custom Theme
+   */
+  globalLayout: '/theme/layouts/GlobalLayout.vue',
+  extend: '@vuepress/theme-default',
 
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
