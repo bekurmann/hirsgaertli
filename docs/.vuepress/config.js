@@ -87,32 +87,35 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     ['@vuepress/search', {
-      searchMaxSuggestions: 10
+      searchMaxSuggestions: 8
     }],
     ['@vuepress/blog',
     {
       directories: [
         {
-          id: 'posts',
-          dirname: '_posts',
-          path: '/blog/',
+          id: 'howto',
+          dirname: '_howto',
+          path: '/howto/',
           layout: 'Blog_IndexPost',
           itemLayout: 'Blog_Post',
-          itemPermalink: '/blog/:year/:month/:day/:slug',
+          itemPermalink: '/howto/:year/:month/:day/:slug',
           pagination: {
-            lengthPerPage: 8,
+            lengthPerPage: 6,
             layout: 'Blog_DirectoryPagination'
           },
         },
-      ],
-      frontmatters: [
-        {
-          id: 'category',
-          keys: ['category'],
-          path: '/blog/category/',
-          title: '',
-          scopeLayout: 'Blog_DirectoryPagination'
-        },
+        // {
+        //   id: 'opinion',
+        //   dirname: '_opinion',
+        //   path: '/opinion/',
+        //   layout: 'Blog_IndexPost',
+        //   itemLayout: 'Blog_Post',
+        //   itemPermalink: '/opinion/:year/:month/:day/:slug',
+        //   pagination: {
+        //     lengthPerPage: 1,
+        //     layout: 'Blog_DirectoryPagination'
+        //   },
+        // },
       ],
       sitemap: 
       {

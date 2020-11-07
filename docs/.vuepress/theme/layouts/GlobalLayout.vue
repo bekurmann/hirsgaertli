@@ -81,12 +81,12 @@
               </v-list-item-content>
             </template>
 
-            <!-- <v-list-item nav link to="/blog/category/opinion/">  
+            <!-- <v-list-item nav link to="/opinion/">  
               <v-list-item-title>Kommentare</v-list-item-title>     
               <v-list-item-icon><v-icon>mdi-account-voice</v-icon></v-list-item-icon>     
             </v-list-item>    -->
 
-            <v-list-item link to="/blog/category/howto/">       
+            <v-list-item link to="/howto/">       
               <v-list-item-title>Anleitungen</v-list-item-title>         
               <v-list-item-icon><v-icon>mdi-text-box-search-outline</v-icon></v-list-item-icon>  
             </v-list-item>

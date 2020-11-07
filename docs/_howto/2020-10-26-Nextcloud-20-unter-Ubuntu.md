@@ -3,7 +3,6 @@ title: Installation von Nextcloud 20 unter Ubuntu 20.04
 description: Installation von Nextcloud 20 unter Ubuntu 20.04 (inklusive Redis und Fail2Ban)
 metatags: nextcloud ubuntu 20.04 redis fail2ban installation
 author: Benjamin
-category: howto
 date: 2020-10-26
 img: /blog/2020-10-26/nextcloud.png
 ---
