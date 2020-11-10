@@ -96,12 +96,9 @@ module.exports = {
           id: 'howto',
           dirname: '_howto',
           path: '/howto/',
-          layout: 'Blog_IndexPost',
-          itemLayout: 'Blog_Post',
           itemPermalink: '/howto/:year/:month/:day/:slug',
           pagination: {
             lengthPerPage: 6,
-            layout: 'Blog_DirectoryPagination'
           },
         },
         // {
