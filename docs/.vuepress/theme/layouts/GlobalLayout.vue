@@ -129,7 +129,6 @@
       <!-- Provides the application the proper gutter -->
       <v-container fluid class="ma-0 pa-0">
 
-        
         <component :is="layout" aria-label="main section of website" />
 
       </v-container>

@@ -7,8 +7,7 @@
                         <v-row>
                             <v-col>
                                 <v-container>
-                                    <BaseListLayout v-if="$pagination" />
-                                    <Content v-else />
+                                    <Content />
                                 </v-container>
                                 
                             </v-col>

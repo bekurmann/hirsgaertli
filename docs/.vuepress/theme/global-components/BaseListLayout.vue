@@ -1,5 +1,10 @@
 <template>
-    <v-row justify="center" v-for="page in $pagination.pages">
+
+  <v-container>
+
+    <v-row justify="center" 
+        v-for="page in $pagination.pages"
+        :key="page.key">
         <v-col cols="12" md="10" lg="10" xl="10" > 
             <v-card :to="page.path">
                 <v-img height="200" :src="page.frontmatter.img" class="blue-grey darken-4 hidden-md-and-up"></v-img>
@@ -15,4 +20,18 @@
             </v-card>   
         </v-col>
     </v-row> 
+
+  </v-container>
+  
 </template>
+<script>
+import moment from "moment"
+
+export default {
+  methods: {
+    formateDate(date) {
+      return moment(date).format("L")
+    },
+  },
+}
+</script>

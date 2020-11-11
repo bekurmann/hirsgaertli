@@ -118,7 +118,7 @@
                 <Content slot-key="linux" />
               </v-card-text>
               <v-card-actions style="position: absolute; bottom: 0;">
-                <v-btn color="blue-grey darken-4" dark to="/blog">Erfahre mehr</v-btn>
+                <v-btn color="blue-grey darken-4" dark to="/howto">Erfahre mehr</v-btn>
               </v-card-actions>
             </v-card>
               
