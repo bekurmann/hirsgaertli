@@ -164,7 +164,7 @@ export default {
         return 'Layout'
       }
       return 'NotFound'
-    }
+    },
   }
 }
 </script>
