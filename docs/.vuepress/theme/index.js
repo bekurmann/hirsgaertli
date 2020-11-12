@@ -34,9 +34,10 @@ module.exports = {
           id: 'howto',
           dirname: '_howto',
           path: '/howto/',
+          title: 'Anleitungen',
           itemPermalink: '/howto/:year/:month/:day/:slug',
           pagination: {
-            lengthPerPage: 1,
+            lengthPerPage: 6,
           },
         },
         // {

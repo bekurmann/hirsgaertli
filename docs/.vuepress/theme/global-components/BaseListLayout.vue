@@ -8,7 +8,8 @@
             <v-card 
               v-for="page in $pagination.pages"
               :to="page.path"
-              :key="page.key">
+              :key="page.key"
+              class="mb-5">
                 <v-img height="200" :src="page.frontmatter.img" class="blue-grey darken-4 hidden-md-and-up"></v-img>
                 <div class="d-flex flex-no-wrap justify-space-between">
                   <div>
