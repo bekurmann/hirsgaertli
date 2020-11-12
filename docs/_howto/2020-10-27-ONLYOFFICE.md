@@ -1,10 +1,25 @@
 ---
-title: ONLYOFFICE für Nextcloud
-description: ONLYOFFICE ermöglicht dir, Office-Dateien direkt im Browser kollaborativ zu bearbeiten. Nach der Installation von Nextcloud, gehört die Installation von ONLYOFFICE zum Pflichtprogramm.
-metatags: ubuntu onlyoffice nextcloud docker installation 
+title: &title ONLYOFFICE für Nextcloud
+description: &desc ONLYOFFICE ermöglicht dir, Office-Dateien direkt im Browser kollaborativ zu bearbeiten. Nach der Installation von Nextcloud, gehört die Installation von ONLYOFFICE zum Pflichtprogramm.
+metatags: &metatags ubuntu onlyoffice nextcloud docker installation 
 author: Benjamin
 date: 2020-10-27
-img: /blog/2020-10-27/onlyoffice.png
+img: &img https://hirsgaertli.ch/blog/2020-10-27/onlyoffice.png
+meta: 
+  - name: keywords
+    content: *metatags
+  - property: og:title
+    content: *title
+  - property: og:image
+    content: *img
+  - property: og:description
+    content: *desc
+  - property: twitter:title
+    content: *title
+  - property: twitter:image
+    content: *img
+  - property: twitter:description
+    content: *desc
 ---
 
 # ONLYOFFICE

@@ -1,10 +1,25 @@
 ---
-title: Nginx Proxy Manager installieren
-description: Ein Reverse Proxy ist eine wunderbare Sache. Nicht nur, um die eigentlichen Server zu "verstecken", sondern auch zur zentralen Administration deiner Zertifikate oder zum besseren Schutz vor DDOS-Attacken. Hier zeige ich dir, wie du einen Reverse Proxy mit Hilfe des Nginx Proxy Managers installierst. 
-metatags: ubuntu nginx proxy manager installation 
+title: &title Nginx Proxy Manager installieren
+description: &desc Ein Reverse Proxy ist eine wunderbare Sache. Nicht nur, um die eigentlichen Server zu "verstecken", sondern auch zur zentralen Administration deiner Zertifikate oder zum besseren Schutz vor DDOS-Attacken. Hier zeige ich dir, wie du einen Reverse Proxy mit Hilfe des Nginx Proxy Managers installierst. 
+metatags: &metatags ubuntu nginx proxy manager installation 
 author: Benjamin
 date: 2020-11-02
-img: /blog/2020-11-02/nginx-proxy-manager.png
+img: &img https://hirsgaertli.ch/blog/2020-11-02/nginx-proxy-manager.png
+meta: 
+  - name: keywords
+    content: *metatags
+  - property: og:title
+    content: *title
+  - property: og:image
+    content: *img
+  - property: og:description
+    content: *desc
+  - property: twitter:title
+    content: *title
+  - property: twitter:image
+    content: *img
+  - property: twitter:description
+    content: *desc
 ---
 
 # Nginx Proxy Manager

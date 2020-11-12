@@ -1,10 +1,25 @@
 ---
-title: Unattended Upgrades in Ubuntu 20.04 konfigurieren
-description: So richtest du automatische Updates unter Ubuntu 20.04 ein. Damit dein Server stets auf dem neusten Stand ist. 
-metatags: ubuntu unattended upgrades 
+title: &title Unattended Upgrades in Ubuntu 20.04 konfigurieren
+description: &desc So richtest du automatische Updates unter Ubuntu 20.04 ein. Damit dein Server stets auf dem neusten Stand ist. 
+metatags: &metatags ubuntu unattended upgrades 
 author: Benjamin
 date: 2020-10-28
-img: /blog/2020-10-28/unattended-upgrades.png
+img: &img https://hirsgaertli.ch/blog/2020-10-28/unattended-upgrades.png
+meta: 
+  - name: keywords
+    content: *metatags
+  - property: og:title
+    content: *title
+  - property: og:image
+    content: *img
+  - property: og:description
+    content: *desc
+  - property: twitter:title
+    content: *title
+  - property: twitter:image
+    content: *img
+  - property: twitter:description
+    content: *desc
 ---
 
 # Unattended Upgrades in Ubuntu 20.04 konfigurieren
