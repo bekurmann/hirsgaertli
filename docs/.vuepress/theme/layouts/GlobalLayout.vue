@@ -129,7 +129,8 @@
       <!-- Provides the application the proper gutter -->
       <v-container fluid class="ma-0 pa-0">
 
-        <component :is="layout" aria-label="main section of website" />
+        <!-- <component :is="layout" aria-label="main section of website" /> -->
+        <DefaultGlobalLayout />
 
       </v-container>
     </v-main>
@@ -140,31 +141,19 @@
 
 <script>
 import SearchBox from '@SearchBox'
+import GlobalLayout from '@app/components/GlobalLayout.vue'
 
 export default {
   name: 'App',
 
   components: {
-    SearchBox
+    SearchBox,
+    DefaultGlobalLayout: GlobalLayout,
   },
 
   data: () => ({
     drawer: false,
   }),
-
-
-  computed: {
-    layout () {
-      if (this.$page.path) {
-        if (this.$frontmatter.layout) {
-          // You can also check whether layout exists first as the default global layout does.
-          return this.$frontmatter.layout
-        }
-        return 'Layout'
-      }
-      return 'NotFound'
-    },
-  }
 }
 </script>
 
