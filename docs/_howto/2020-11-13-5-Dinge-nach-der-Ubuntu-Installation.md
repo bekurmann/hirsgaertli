@@ -3,8 +3,8 @@ title: &title 5 Dinge, die du nach der Ubuntu Server Installation tun solltest
 description: &desc Nach der erfolgreichen Installation von Ubuntu Server, empfehle ich dir die folgenden fünf Konfigurationen vorzunehmen. 
 metatags: &metatags ubuntu hardening ssh fail2ban firewall ufw security banner
 author: Benjamin
-date: 2020-11-25
-img: &img https://hirsgaertli.ch/blog/2020-11-23/hardening.png
+date: 2020-11-13
+img: &img https://hirsgaertli.ch/blog/2020-11-13/hardening.png
 meta: 
   - name: keywords
     content: *metatags
