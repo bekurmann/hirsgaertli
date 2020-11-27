@@ -248,14 +248,15 @@ Datenverzeichnis:
 ```bash
 chown -R www-data:www-data /mnt/ssd/
 ```
-```bash
-chown -R www-data:www-data /mnt/ssd/
-```
 
 Nextcloud Hauptverzeichnis
 
 ```bash
 chown -R www-data:www-data /var/www/nextcloud/ 
+```
+
+```bash
+chmod -R 755 /var/www/nextcloud/
 ```
 
 ### Nextcloud Installation mit Web-Oberfläche abschliessen
